@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- ¡Esta linea es muy importante para que las media queries funcionen! -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Aquí pon la ruta y el nombre que quieras para tu archivo CSS -->
+    <link rel="stylesheet" href="./css/estilos.css">
+    <title>Responsividad y Media Queries</title>
+</head>
+<body>
+    <header>
+        <nav class="contenedor">
+             <a href="#" class="nav_logo">Compañía [Redacted]</a>
+             <div class="nav_menu" id="nav_menu">
+                <ul class="nav_lista">
+                    <li class="nav_item"><a href="#" class="nav_link">Inicio</a></li>
+                    <li class="nav_item"><a href="#" class="nav_link">Acerca de</a></li>
+                    <li class="nav_item"><a href="#" class="nav_link">Contacto</a></li>
+                </ul>
+
+                <button class="nav_cerrar" id="nav_cerrar">Cerrar</button>
+
+                <!-- <div class="nav_cerrar" id="nav_cerrar">
+                    <button>Cerrar</button>
+                </div> -->
+             </div>
+
+             <button class="nav_boton" id="nav_boton">Menú</button>
+
+             <!-- <div class="nav_boton" id="nav_boton">
+                <button>Menú</button>
+             </div> -->
+        </nav>
+    </header>
+
+    <main>
+        <section class="inicio">
+            <div class="contenedor inicio_contenedor">
+                <div class="inicio_datos">
+                    <span class="inicio_subtitulo">Error 404</span>
+                    <h1 class="inicio_titulo">Lo siento bro.</h1>
+                    <p class="inicio_descripcion">No encontramos la página que estabas buscando.</p>
+                    <a href="#" class="inicio_boton">Ir a inicio</a>
+                </div>
+
+                <div class="inicio_img">
+                    <!-- Puedes poner la imagen que sea -->
+                    <img src="./images/anime-girl-sad-sad.gif" alt="">
+                </div>
+            </div>
+
+            <footer class="inicio_footer">
+                <span>(123) 456-789</span>
+                <span>info@company.com</span>
+            </footer>
+        </section>
+    </main>
+
+    <!-- Ruta y archivo de tu elección -->
+    <script src="./js/main.js"></script>
+</body>
+</html>

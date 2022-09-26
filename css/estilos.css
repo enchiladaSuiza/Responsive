@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* Hace que al declarar ancho o altura se incluyan los valores de margen y padding */
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: black;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.contenedor {
+    max-width: 1024px;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.principal {
+    overflow: hidden;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    background-color: transparent;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+nav {
+    height: 3.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button {
+    font-size: 0.9rem;
+    padding: 0.2rem 0.6rem 0.2rem 0.6rem;
+    border-radius: 8px;
+    background: wheat;
+    border: none;
+    transition: 0.4s;
+}
+
+button:hover {
+    box-shadow: 0 4px 12px dimgray;
+}
+
+.nav_logo, .nav_boton {
+    color: black;
+    display: inline-flex;
+}
+
+.nav_logo {
+    font-weight: 700;
+}
+
+.nav_boton {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+    .nav_menu {
+        position: fixed;
+        background-color: burlywood;
+        left: 0;
+        top: -100%;
+        width: 100%;
+        padding: 5rem 0 4rem;
+        border-radius: 0 0 1.5rem 1.5rem;
+        box-shadow: 0 2px 4px saddlebrown;
+        transition: 0.4s;
+    }
+}
+
+.nav_lista {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+}
+
+.nav_link {
+    color: black;
+}
+
+.nav_cerrar {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    color: black;
+    cursor: pointer;
+}
+
+.mostrar_menu {
+    top: 0;
+
+}
+
+main {
+    overflow: hidden;
+}
+
+.inicio {
+    background-color: burlywood;
+    padding: 9rem 0 2rem;
+    height: 100vh;
+    display: grid;
+}
+
+.inicio_contenedor {
+    display: grid;
+    align-content: center;
+    row-gap: 2.5rem;
+}
+
+.inicio_datos {
+    text-align: center;
+}
+
+.inicio_subtitulo {
+    display: block;
+}
+
+.inicio_titulo {
+    font-size: 2rem;
+    margin: 0.75rem 0;
+}
+
+.inicio_boton {
+    margin-top: 2rem;
+    display: inline-block;
+    background-color: black;
+    color: white;
+    padding: 0.80rem 1.5rem;
+    border-radius: 3rem;
+    transition: 0.4s;
+}
+
+.inicio_boton:hover {
+    box-shadow: 0 4px 12px dimgray;
+}
+
+.inicio_img img {
+    width: 230px;
+}
+
+.inicio_img {
+    justify-self: center;
+}
+
+
+.inicio_footer {
+    display: flex;
+    justify-content: center;
+    column-gap: 0.5rem;
+    font-size: 0.5rem;
+    align-self: flex-end;
+}
+
+/* Cuando se declaran múltiples media queries según el ancho del viewport se les llaman "breakpoints". Aquí están. */
+/* Para dispositivos pequeños */
+@media screen and (max-width: 320px) {
+    .inicio {
+        padding-top: 7rem;
+    }
+}
+
+/* Para dispositivos medianos */
+@media screen and (min-width: 767px) {
+    nav {
+        height: 5rem;
+    }
+
+    .nav_boton, .nav_cerrar {
+        display: none;
+    }
+
+    .nav_lista {
+        flex-direction: row;
+        column-gap:  3.5rem;
+    }
+}
+
+/* Para dispositivos grandes */
+@media screen and (min-width: 1024px) {
+    .inicio_contenedor {
+        /* Magia negra para que hayan dos columnas en la grid */
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        column-gap: gap;
+    }
+
+    .inicio_datos {
+        text-align: initial;
+    }
+
+    .inicio_img img {
+        width: 400px;
+    }
+}
+
+@media screen and (min-width: 1048px) {
+    .contenedor {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
